@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 32px 16px;
   font-family: Arial, sans-serif;
-  background: linear-gradient(180deg, #f9fbff 0%, var(--bg-color) 100%);
+  background: #f9fbff;
   color: var(--text-color);
 }
 
