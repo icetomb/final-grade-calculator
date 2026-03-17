@@ -73,7 +73,7 @@ body {
 }
 
 .intro-card {
-  text-align: center;
+  text-align: left;
 }
 
 h1,
@@ -84,7 +84,7 @@ h3 {
 
 h1 {
   margin-bottom: 12px;
-  text-align: center;
+  text-align: left;
 }
 
 h2 {
