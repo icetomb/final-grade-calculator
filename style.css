@@ -173,11 +173,6 @@ button:disabled {
   margin-top: 8px;
 }
 
-.intro-actions {
-  justify-content: center;
-  margin-top: 20px;
-}
-
 .rows-stack {
   display: grid;
   gap: 16px;
