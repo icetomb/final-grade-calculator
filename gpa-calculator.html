@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3CP47FH4BF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-3CP47FH4BF");
+  </script>
+
+  <meta charset="UTF-8" />
+  <title>GPA Calculator - 4.0 Scale</title>
+  <meta
+    name="description"
+    content="Free GPA calculator. Add your courses, grades, and credits to calculate GPA on a 4.0 scale."
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="pencil.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-link">Final Grade Calculator</a>
+      <a href="gpa-calculator.html" class="nav-link active">GPA Calculator</a>
+    </nav>
+
+    <section class="card intro-card">
+      <h1>GPA Calculator</h1>
+      <p class="section-intro">
+        Add your courses, choose a letter grade or percentage for each one, and
+        calculate your GPA on a 4.0 scale.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Course GPA Breakdown</h2>
+      <p class="section-intro">
+        GPA is calculated as the sum of quality points divided by the sum of
+        credits.
+      </p>
+
+      <div id="courseRows" class="rows-stack"></div>
+
+      <div class="button-row">
+        <button type="button" id="addCourseBtn" class="button-secondary">
+          Add Course
+        </button>
+        <button type="button" id="calculateGpaBtn">Calculate GPA</button>
+        <button type="button" id="resetGpaBtn" class="button-secondary">
+          Reset
+        </button>
+      </div>
+
+      <p id="gpaError" class="message hidden" aria-live="polite"></p>
+
+      <div class="scale-card">
+        <p class="form-note">
+          Letter grades use the 4.0 scale you provided. If you choose
+          percentage, it is converted using this simple scale:
+          A+ = 97-100, A = 93-96, A- = 90-92, B+ = 87-89, B = 83-86,
+          B- = 80-82, C+ = 77-79, C = 73-76, C- = 70-72, D+ = 67-69,
+          D = 63-66, F = below 63.
+        </p>
+      </div>
+
+      <div id="gpaResults" class="results-panel hidden">
+        <div class="summary-grid">
+          <div class="summary-box">
+            <span class="summary-label">Final GPA</span>
+            <span id="overallGpaValue" class="summary-value">0.00</span>
+          </div>
+          <div class="summary-box">
+            <span class="summary-label">Total Credits</span>
+            <span id="totalCreditsValue" class="summary-value">0.00</span>
+          </div>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Course Name</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Grade Points</th>
+                <th scope="col">Quality Points</th>
+              </tr>
+            </thead>
+            <tbody id="gpaBreakdownBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="gpa.js"></script>
+</body>
+</html>
